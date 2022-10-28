@@ -1,20 +1,18 @@
 {
-  "name": "express-dev-skills-lab",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "express-dev-skills-labv2",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/owentashlin/express-dev-skills.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/owentashlin/express-dev-skills/issues"
-  },
-  "homepage": "https://github.com/owentashlin/express-dev-skills#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.8",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1"
+  }
 }

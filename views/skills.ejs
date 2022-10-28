@@ -1,3 +1,4 @@
+<!-- views/skills.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,15 +8,26 @@
     <title>Dev Skills Lab</title>
 </head>
 <body>
-    <h1>Dev Skills</h1>
-    <ul>
+    <h1>Owen's Awesome Dev Skills</h1>
+    <a href="/skills/new-skill">Add New Skill</a>
+    <p>
+      <ul>
         <% skills.forEach(function(t) { %>
-            <li>
-              <%= t.skill %>
+          <li>
+            <p><form action="/skills/<%= t.id %>?_method=DELETE" class="delete-form" method="POST">
+              <button type="submit">x</button>
+              </form>
+              <a href="/skills/<%= t.id %>">
+                <%= t.skill %>
+              </a>
                 - 
-              <%= t.skill %>
-            </li>
-          <% }) %>
-    </ul>
+                <%= t.mastered ? 'working knowledge' : 'still learning' %>
+          </li></p>
+        <% }) %>
+      </ul>
+    </p>
 </body>
 </html>
+   
+
+
